@@ -1,0 +1,78 @@
+:host {
+  width: 98%;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.form-full-width {
+  width: 99%;
+  margin-bottom: 4px;
+}
+
+.hint-text {
+  font-size: .8rem;
+  color: #ccc;
+}
+
+.error-text {
+  color: #ff0000;
+}
+
+.error-span {
+
+  display: block;
+  color: #FFF;
+  background: #ff0000;
+  font-size: 0.8rem;
+  padding: 8px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  border-radius: 3px;
+}
+
+.button-align {
+  text-align: right;
+  margin-top: 20px;
+  display: block;
+}
+
+.save-button {
+  width: 150px;
+  height: 50px;
+}
+
+.cancel-button {
+  width: 150px;
+  height: 50px;
+}
+
+.span-cancel {
+  color: #1a2939 !important;
+}
+
+.span-action {
+  display: block;
+  margin-top: 3px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.3rem !important;
+}
+
+
+@media(max-width:600px) {
+  .span-action {
+    font-size: 1.0rem !important;
+  }
+
+  .save-button {
+    width: 120px;
+    height: 50px;
+  }
+
+  .cancel-button {
+    width: 120px;
+    height: 50px;
+  }
+}

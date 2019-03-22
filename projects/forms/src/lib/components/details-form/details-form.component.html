@@ -1,0 +1,26 @@
+<form validate [formGroup]="validateForm">
+  <mat-form-field appearance="standard" class="form-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Your Full Name" type="text" id="txtFullName" required [formControl]="txtFullName" />
+    <mat-error *ngIf="txtFullName.invalid" class="error-text">*Required</mat-error>
+    <mat-hint class="hint-text">Your Full Name</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="standard" class="form-full-width">
+    <mat-label>Mobile Number</mat-label>
+    <input matInput placeholder="Your Phone Number" type="tel" id="mobileNumber" manxNumberOnly required [formControl]="txtMobileNumber" />
+    <mat-error *ngIf="txtMobileNumber.invalid" class="error-text">*Required</mat-error>
+    <mat-hint class="hint-text">Your Mobile Number</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="standard" class="form-full-width">
+    <mat-label>Email Address</mat-label>
+    <input matInput placeholder="Your Email Address" [formControl]="txtEmail" required type="email" />
+    <mat-error *ngIf="txtEmail.invalid" class="error-text">*Requried</mat-error>
+    <mat-hint class="hint-text">Your Email Address</mat-hint>
+  </mat-form-field>
+  <mat-card-actions class="button-align form-full-width">
+    <button mat-button (click)="onCancel()" class="cancel-button"><span class="span-action span-cancel">Cancel</span></button>
+    &nbsp;
+    <button mat-button mat-flat-button color="primary" (click)="onSubmit()" class="save-button" cdkFocusInitial>
+      <span class="span-action">Submit</span></button>
+  </mat-card-actions>
+</form>

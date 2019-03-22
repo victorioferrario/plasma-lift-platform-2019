@@ -1,0 +1,29 @@
+<article class="details-control  animated-component">
+  <mat-card class="dark-card">
+    <h4>
+      Send us a message
+      <span class="error-span fadeIn animated-error" *ngIf="(this.context.form.showError | async)">* Required Fields</span>
+    </h4>
+    <mat-card-content>
+      <article *ngIf="this.context.form.showForm | async">
+        <frm-contact-form></frm-contact-form>
+      </article>
+      <article *ngIf="this.context.form.showLoading | async">
+        <div class="loader-wrapper">
+          <mat-spinner class="spacer-bottom fadeIn animated-card"></mat-spinner>
+        </div>
+      </article>
+      <article *ngIf="this.context.form.showMessage | async">
+        <div class="fadeIn animated-card">
+          <h3>Success</h3>
+          <p class="message-result">
+            Your message has been sent. <br />
+            Thank you!</p>
+          <div class="button-align-continue">
+            <button mat-flat-button color="primary" (click)="onContinue()">Continue</button>
+          </div>
+        </div>
+      </article>
+    </mat-card-content>
+  </mat-card>
+</article>

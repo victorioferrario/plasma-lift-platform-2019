@@ -1,0 +1,35 @@
+<ng-container>
+  <mat-sidenav-container class="sidenav-container ">
+    <mat-sidenav #drawer class="sideNav" [opened]="this.context.page.sideNavIsOpen">
+      <mat-nav-list>
+        <h3 class="menu-header">Menu</h3>
+        <mat-divider></mat-divider>
+        <fab-menu-link index="1" css="{{this.context.nav.labelHome | async }}" (childEvent)="onClick($event)">Home</fab-menu-link>
+        <mat-divider></mat-divider>
+        <fab-menu-link index="2" css="{{this.context.nav.labelHowItWorks | async }}" (childEvent)="onClick($event)">How&nbsp;it&nbsp;works?</fab-menu-link>
+        <mat-divider></mat-divider>
+        <fab-menu-link index="5" css="{{this.context.nav.labelTrainingPrograms | async }}" (childEvent)="onClick($event)">Training&nbsp;Programs</fab-menu-link>
+        <mat-divider></mat-divider>
+        <fab-menu-link index="6" css="{{this.context.nav.labelPlasmaDevice | async }}" (childEvent)="onClick($event)">Plasma&nbsp;Device</fab-menu-link>
+        <mat-divider></mat-divider>
+        <fab-menu-link index="3" css="{{this.context.nav.labelContactUs | async }}" (childEvent)="onClick($event)">Contact&nbsp;Us</fab-menu-link>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+      <div class="social-links-wrapper">
+        <fab-social-links-header></fab-social-links-header>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content" (scroll)="onScroll()" #scrollViewPort>
+      <div id="destination"></div>
+      <ng-content select=".scroll-top-container" *ngIf="(this.hasScrollTopButton | async)"></ng-content>
+      <fab-content>
+        <ng-content></ng-content>
+        <footer fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="25px" fxLayoutAlign="center"
+          #footerElement>
+          <fab-social-links-header></fab-social-links-header><br />
+          <span class="copyright-css"> © 2007-2019, All Rights Reserved</span>
+        </footer>
+      </fab-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

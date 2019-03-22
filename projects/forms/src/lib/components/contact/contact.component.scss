@@ -1,0 +1,99 @@
+:host {
+  padding: 1.8rem;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.details-control {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+h4 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: #1a2939 !important;
+  padding: 1.0rem;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-top: -5px;
+  margin-left: -2px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.animated-card {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: .400s;
+  animation-delay: .400s;
+}
+
+.animated-component {
+  -webkit-animation-duration: 700ms;
+  animation-duration: 700ms;
+  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+
+.m-hide {
+  display: none;
+}
+
+.animated-text {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.animated-error {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+}
+
+.dark-card {
+  background: rgba(255, 255, 255, 0.267);
+}
+
+
+@media(max-width:600px) {
+  :host {
+    padding: .8rem;
+    width: 100%;
+
+  }
+}
+
+.loader-wrapper {
+  display: block;
+  clear: both;
+  width: 100px;
+  margin: auto;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}

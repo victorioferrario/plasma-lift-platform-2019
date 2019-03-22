@@ -1,0 +1,96 @@
+// $banner-url : url('/assets/banners/banner-1500x340.png');
+// $banner-size: 1920px 340px;
+// $banner-min-height: 340px;
+
+// :host {
+//   --banner-url-1500: $banner-url;
+//   --banner-size-1500: $banner-size;
+//   --banner-min-height-1500: $banner-min-height;
+//   //
+//   --banner-url-1200: $banner-url;
+//   --banner-size-1200: $banner-size;
+//   --banner-min-height-1200: $banner-min-height;
+//   //
+//   --banner-url-700: $banner-url;
+//   --banner-size-700: $banner-size;
+//   --banner-min-height-700: $banner-min-height;
+//   display: block;
+//   text-align: center;
+// }
+
+// .container {
+//   width: 100%;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   background-repeat: no-repeat;
+//   background-position: center top;
+// }
+
+// .container {
+//   min-height: $banner-min-height;
+//   background-image: $banner-url;
+//   background-size: $banner-size;
+// }
+
+// @media(max-width: 1500px) {
+//   .container {
+//     min-height: var(--banner-min-height-1500, $banner-min-height);
+//     background-image: var(--banner-size-1500, $banner-url);
+//     background-size: var(--banner-size-1500, $banner-size);
+//   }
+// }
+
+// @media(max-width: 1200px) {
+//   .container {
+//     min-height: var(--banner-min-height-1200, $banner-min-height);
+//     background-image: var(--banner-size-1200, $banner-url);
+//     background-size: var(--banner-size-1200, $banner-size);
+//   }
+// }
+
+// @media(max-width: 700px) {
+//   .container {
+//     min-height: var(--banner-min-height-700, $banner-min-height);
+//     background-image: var(--banner-size-700, $banner-url);
+//     background-size: var(--banner-size-700, $banner-size);
+//   }
+// }
+$banner-url-regular : '/assets/banners/banner-1500x340.png';
+
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: var(--banner-min-height);
+  background-image: var(--banner-url, url(#));
+  background-size: var(--banner-size);
+}
+
+@media(max-width: 1500px) {
+  .container {
+    min-height: var(--banner-min-height-1500);
+    background-image: var(--banner-url-1500);
+    background-size: var(--banner-size-1500);
+  }
+}
+
+@media(max-width: 1200px) {
+  .container {
+    min-height: var(--banner-min-height-1200);
+    background-image: var(--banner-url-1200);
+    background-size: var(--banner-size-1200);
+  }
+}
+
+@media(max-width: 700px) {
+  .container {
+    min-height: var(--banner-min-height-700);
+    background-image: var(--banner-url-700);
+    background-size: var(--banner-size-700);
+  }
+}

@@ -1,0 +1,17 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
+.animated-image {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+@import "banners";

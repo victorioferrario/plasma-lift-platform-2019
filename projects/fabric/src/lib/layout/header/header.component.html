@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="mat-toolbar-rows mat-elevation-z6">
+  <mat-toolbar-row class="mat-toolbar-row-1">
+    <div class="col-logo">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button class="mobile-nav-button" (click)="onToggleMenu()">
+        <mat-icon aria-label="Side nav toggle icon" class="mobile-nav">menu</mat-icon>
+      </button>
+      <a mat-button href="javascript:void(0)" class="logo-button fadeInLeft animated-text" (click)="onClick(1)"
+        aria-label="Plasma-Lift Academy">
+        <img src="assets/plasma-lift.svg" class="plasma-lift-logo" />
+        <span class="logo-text-wrapper">
+          <span class="plasma-lift-text">Plasma-Lift Academy</span>
+          <span class="plasma-lift-sub-text">International School of Plasma Cosmetology</span>
+        </span></a>
+    </div>
+    <nav class="col-action">
+      <a mat-button (click)="onClick(3)" class="button-contact">
+        <span class="span-action">Contact us</span></a>
+      <a mat-flat-button (click)="openDialog()" class="button-get-started">
+        <span class="span-action-borderless">Program Details</span></a>
+    </nav>
+    <span class="nav-spacer"></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="mat-toolbar-row-2">
+    <nav class="col-nav fadeInRight animated-text">
+      <a mat-button href="javascript:void(0);" (click)="onClick(1)">
+        <span class="{{this.context.nav.labelHome | async }}">Home</span> </a>&nbsp;
+      <a mat-button href="javascript:void(0);" (click)="onClick(2)">
+        <span class="{{this.context.nav.labelHowItWorks | async }}">How it works?</span> </a>&nbsp;
+      <a mat-button href="javascript:void(0);" (click)="onClick(5)">
+        <span class="{{this.context.nav.labelTrainingPrograms | async }}">Training Programs</span></a>&nbsp;
+      <a mat-button href="javascript:void(0);" (click)="onClick(6)">
+        <span class="{{this.context.nav.labelPlasmaDevice | async }}">Plasma Device</span></a>
+      <fab-ink-bar></fab-ink-bar>
+    </nav>
+    <nav class="col-action col-social fadeInLeft animated-text">
+      <fab-social-links-header></fab-social-links-header>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>

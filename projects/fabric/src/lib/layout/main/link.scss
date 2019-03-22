@@ -1,0 +1,34 @@
+.list-button {
+  position: relative;
+}
+
+.ink-vertical {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  bottom: 0px;
+  width: 4px;
+  background-color: #e51a38;
+}
+
+.regular {
+  color: #Fff;
+
+  font-weight: 400;
+  font-size: 1.2rem !important;
+}
+
+.regular-ink {
+  display: none;
+}
+
+.active-label {
+  font-weight: 400;
+
+  color: #95DBE8;
+  font-size: 1.2rem !important;
+}
+
+.active-label-ink {
+  display: block;
+}
