@@ -80,6 +80,7 @@ h4 {
   background-color: #009EBD;
 }
 
+
 .span-action {
   display: block;
   margin-top: 6px;
@@ -259,6 +260,86 @@ ul {
   }
 
   .hero-text-3 {
+    display: none;
+  }
+}
+
+.landing-p {
+  margin-top: 0;
+  padding: 1.0rem;
+  font-size: 1.2rem;
+}
+
+a.basic:link,
+a.basic:visited {
+  font-size: 1.2rem;
+  color: #ff0000;
+  text-decoration: none;
+}
+
+a.basic:hover {
+  font-size: 1.2rem;
+  color: #00718C;
+  text-decoration: none;
+}
+
+.action-text {
+  color: #00718c;
+}
+
+.extend-h4 {
+  background-color: #00718C;
+}
+
+.span-we-offer {
+  color: #00718c;
+  font-weight: 600;
+  display: block;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.button-book-training {
+  border: solid 2px #009EBD !important;
+  height: 50px;
+  margin-right: 25px;
+  margin-top: 20px;
+  width: 300px;
+  background-color: #009EBD;
+}
+
+.button-book-group-training {
+  border: solid 2px #009EBD !important;
+  height: 50px;
+
+  margin-top: 20px;
+  width: 300px;
+  background-color: #009EBD;
+
+}
+
+.br-600 {
+  display: none;
+}
+
+@media(max-width:600px) {
+  .br-600 {
+    display: block;
+  }
+}
+
+@media(max-width:900px) {
+  .button-book-training {
+    width: 100%;
+  }
+
+  .button-book-group-training {
+    width: 100%;
+
+
+  }
+
+  .hide-br {
     display: none;
   }
 }
